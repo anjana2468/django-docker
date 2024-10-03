@@ -3,8 +3,8 @@ FROM ubuntu:latest
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the requirements file to the container
-COPY requirements.txt /app
+# Copy the entire project directory to /app
+COPY . /app
 
 # Update and install Python and pip
 RUN apt-get update && \
@@ -19,10 +19,7 @@ RUN python3 -m venv /opt/venv && \
 # Set the environment path to the virtual environment
 ENV PATH="/opt/venv/bin:$PATH"
 
-# Copy the application files to the container
-COPY devops /app
-
-# Expose the port your app runs on (if necessary)
+# Expose the port your app runs on
 EXPOSE 8000
 
 # Define the entry point to run your Python app
