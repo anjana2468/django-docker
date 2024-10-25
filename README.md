@@ -59,13 +59,14 @@ Log out and log back in to apply the user group changes.
 5. Clone Your Project to EC2
 Clone your Django project from your GitHub repository:
 git clone https://github.com/anjana2468/django-docker.git
+
 cd django-docker
 
-6. Build the Docker Image
+7. Build the Docker Image
 Now, build your Docker image directly on the EC2 instance:
 docker build -t django-app .
 
-7. Run the Container
+8. Run the Container
 docker run -p 8000:8000 -it django-app
 
 Project Structure
