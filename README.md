@@ -70,35 +70,9 @@ docker run -p 8000:8000 -it django-app
 
 Project Structure
 Here is a basic breakdown of the project files:
-
-python-web-app/
-├── Dockerfile                    # Docker configuration file for building the Django app image
-├── manage.py                     # Django's primary command-line utility
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation and setup guide
-├── .env                          # Environment variables (excluded from version control)
-├── project/                      # Django project directory
-│   ├── __init__.py               # Marks this directory as a Python package
-│   ├── asgi.py                   # ASGI configuration (for async support)
-│   ├── settings.py               # Main project settings
-│   ├── urls.py                   # Root URL routing for the project
-│   ├── wsgi.py                   # WSGI configuration for running Django with a web server
-│                
-│                  
-└── demo/                          # Django application directory
-    ├── __init__.py               # Marks this directory as a Python package
-    ├── admin.py                  # Admin interface settings for this app
-    ├── apps.py                   # App-specific configuration
-    ├── migrations/               # Directory for Django migrations
-    │   └── __init__.py
-    ├── models.py                 # Database models for this app
-    ├── tests.py                  # Unit tests for this app
-    ├── views.py                  # Logic for handling web requests
-    ├── urls.py                   # URL routing for this app
-    └── templates/                # App-level templates directory (specific to this app)
-        └── index.html/           # Example template file for this app
-
-
+```
+python-web-app/ ├── Dockerfile # Docker configuration file for building the Django app image ├── manage.py # Django's primary command-line utility ├── requirements.txt # Python dependencies ├── README.md # Project documentation and setup guide ├── .env # Environment variables (excluded from version control) ├── project/ # Django project directory │ ├── init.py # Marks this directory as a Python package │ ├── asgi.py # ASGI configuration (for async support) │ ├── settings.py # Main project settings │ ├── urls.py # Root URL routing for the project │ └── wsgi.py # WSGI configuration for running Django with a web server └── demo/ # Django application directory ├── init.py # Marks this directory as a Python package ├── admin.py # Admin interface settings for this app ├── apps.py # App-specific configuration ├── migrations/ # Directory for Django migrations │ └── init.py ├── models.py # Database models for this app ├── tests.py # Unit tests for this app ├── views.py # Logic for handling web requests ├── urls.py # URL routing for this app └── templates/ # App-level templates directory (specific to this app) └── index.html # Example template file for this app
+```
 How to Contribute
 Contributions are welcome! If you'd like to improve this project or add new features, feel free to fork the repository and submit a pull request.
 
