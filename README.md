@@ -71,7 +71,7 @@ docker run -p 8000:8000 -it django-app
 
 Project Structure
 Here is a basic breakdown of the project files:
-
+'''
  python-web-app/
   ├── Dockerfile                    # Docker configuration file for building the Django app image
   ├── manage.py                     # Django's primary command-line utility
@@ -97,7 +97,7 @@ Here is a basic breakdown of the project files:
       └── templates/                # App-level templates directory (specific to this app)
           └── index.html            # Example template file for this app
 
-
+'''
 How to Contribute
 Contributions are welcome! If you'd like to improve this project or add new features, feel free to fork the repository and submit a pull request.
 
