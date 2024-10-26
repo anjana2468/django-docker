@@ -1,3 +1,4 @@
+![Screenshot 2024-10-26 140058](https://github.com/user-attachments/assets/c76b270f-92b0-42a8-9a7d-74afa3af1b13)
 ### # Django Application Containerized with Docker
 
 This repository contains a simple Django application with one app that is containerized using Docker. The goal is to make it easy to run the Django application in a consistent environment using containers.
