@@ -14,15 +14,17 @@ FROM ubuntu:latest
 ````COPY . /app````
 
 # Update and install Python and pip
+````
 RUN apt-get update && \
     apt-get install -y python3 python3-pip python3-venv && \
     apt-get clean
-
+````
 # Create a virtual environment and install the required dependencies
+````
 RUN python3 -m venv /opt/venv && \
     /opt/venv/bin/pip install --upgrade pip && \
     /opt/venv/bin/pip install -r requirements.txt
-
+````
 # Set the environment path to the virtual environment
 ENV PATH="/opt/venv/bin:$PATH"
 
@@ -45,29 +47,34 @@ Setup Instructions
 ### 2. SSH into the EC2 Instance
 
 Use the following command to connect to your EC2 instance:
+```
 ssh -i <your-key.pem> ec2-user@<your-ec2-public-ip>
-
+````
 3. Install Docker on EC2
 Once you're connected to the EC2 instance, install Docker using the following commands:
-
+````
 sudo apt update -y
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu
+````
 Log out and log back in to apply the user group changes.
 
 5. Clone Your Project to EC2
 Clone your Django project from your GitHub repository:
+````
 git clone https://github.com/anjana2468/django-docker.git
 cd django-docker
-
+````
 6. Build the Docker Image
 Now, build your Docker image directly on the EC2 instance:
+````
 docker build -t django-app .
-
+````
 7. Run the Container
+```
 docker run -p 8000:8000 -it django-app
-
+```
 Project Structure
 Here is a basic breakdown of the project files:
 ```
