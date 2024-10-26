@@ -8,10 +8,14 @@ Dockerfile is a file where you provide the steps to build your Docker Image.
 
 FROM ubuntu:latest
 # Set the working directory inside the container
-````WORKDIR /app````
+````
+WORKDIR /app
+````
 
 # Copy the entire project directory to /app
-````COPY . /app````
+````
+COPY . /app
+````
 
 # Update and install Python and pip
 ````
@@ -26,15 +30,19 @@ RUN python3 -m venv /opt/venv && \
     /opt/venv/bin/pip install -r requirements.txt
 ````
 # Set the environment path to the virtual environment
+```
 ENV PATH="/opt/venv/bin:$PATH"
-
+````
 # Expose the port your app runs on
-EXPOSE 8000
 
+```
+EXPOSE 8000
+```
 # Define the entry point to run your Python app
+```
 ENTRYPOINT [ "python3" ]
 CMD [ "manage.py", "runserver", "0.0.0.0:8000" ]
-
+````
 Setup Instructions
 1.## Setting up the EC2 Instance
 
