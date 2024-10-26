@@ -8,10 +8,10 @@ Dockerfile is a file where you provide the steps to build your Docker Image.
 
 FROM ubuntu:latest
 # Set the working directory inside the container
-WORKDIR /app
+````WORKDIR /app````
 
 # Copy the entire project directory to /app
-COPY . /app
+````COPY . /app````
 
 # Update and install Python and pip
 RUN apt-get update && \
