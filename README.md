@@ -1,23 +1,23 @@
-# # Django Application Containerized with Docker
+### # Django Application Containerized with Docker
 
 This repository contains a simple Django application with one app that is containerized using Docker. The goal is to make it easy to run the Django application in a consistent environment using containers.
 
-# Dockerfile
+### Dockerfile
 Dockerfile is a file where you provide the steps to build your Docker Image.
 
 
 FROM ubuntu:latest
-# Set the working directory inside the container
+### Set the working directory inside the container
 ````
 WORKDIR /app
 ````
 
-# Copy the entire project directory to /app
+### Copy the entire project directory to /app
 ````
 COPY . /app
 ````
 
-# Update and install Python and pip
+### Update and install Python and pip
 ````
 RUN apt-get update && \
     apt-get install -y python3 python3-pip python3-venv && \
